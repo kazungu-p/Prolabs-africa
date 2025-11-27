@@ -3,7 +3,7 @@
     background: url(/images/landing.png);
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    min-height: 90vh;
 }
 .landing-content{
     position: absolute;
@@ -33,6 +33,17 @@
     }
     .landing-content h1{
         font-size: 2.5em;
+        overflow-wrap: break-word;
+    }
+}
+@media screen and (max-width: 450px){
+    .landing-content{
+        top: 8%;
+        width: 75%;
+        text-align: center;
+    }
+    .landing-content h1{
+        font-size: 1.8em;
         overflow-wrap: break-word;
     }
 }

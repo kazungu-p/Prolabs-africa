@@ -1,7 +1,7 @@
 header nav{
     background: #acbdde;
     padding: 10px 4%;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,7 +14,7 @@ a{
     font-size: 18px;
     color: #0D1B3A;
 }
-.nav-links ul{
+.nav-links, .nav-links ul{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -24,7 +24,7 @@ a{
     border-radius: 8px;
     cursor: pointer;
 }
-.nav-btn button{
+.nav-links button{
     padding: 15px;
     border: 0;
     outline: 0;
@@ -54,9 +54,9 @@ a{
         left: 50%;
         transform: translateX(-50%);
         background-color: #acbdde;
-
         width: 100%;
         transition: 0.5s ease-in;
+        align-items: center;
     }
     .nav-links ul{
         align-items: center;
@@ -65,9 +65,10 @@ a{
     .nav-links.active{
         z-index: 1;
         display: block;
-        padding: 20px;
+        padding: 10px;
     }
-    .nav-btn{
-        margin-right: -45%;
+    .nav-links button{
+        margin: 10px auto;
+        display: block;
     }
 }

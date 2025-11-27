@@ -21,8 +21,6 @@ function Navbar() {
                         <li><a href="">Portfolio</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
-                </div>
-                <div className="nav-btn">
                     <button>Request a Quote</button>
                 </div>
                 <div className="hamburger" onClick={toggleMenu}>
