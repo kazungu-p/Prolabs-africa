@@ -1,0 +1,36 @@
+header nav{
+    padding: 15px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #0D1B3A;
+}
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo img{
+    width: 70px;
+    border-radius: 8px;
+}
+.nav-btn button{
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    background-color: #3B5F96;
+    color: white;
+    font-size: 15px;
+}
+
+.hamburger{
+    display: none;
+}
