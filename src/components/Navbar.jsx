@@ -3,7 +3,7 @@ import "../assets/styles/navbar.css"
 
 function Navbar() {
 
-    const [menuOpen, setMenuOpen] = useState("false");
+    const [menuOpen, setMenuOpen] = useState(false);
 
     function toggleMenu() {
         setMenuOpen(!menuOpen);
@@ -13,7 +13,7 @@ function Navbar() {
         <header>
             <nav>
                 <div className="logo">
-                    <img src="images/logo.jpg" alt="prolabs-africa logo" />
+                    <img src="images/image.png" alt="prolabs-africa logo" />
                 </div>
                 <div className={`nav-links ${menuOpen ? "active" : ""}`}>
                     <ul>
@@ -25,7 +25,7 @@ function Navbar() {
                 <div className="nav-btn">
                     <button>Request a Quote</button>
                 </div>
-                <div className="hamburger">
+                <div className="hamburger" onClick={toggleMenu}>
                     {menuOpen ? "\u2715" : "\u2630"}
                 </div>
             </nav>

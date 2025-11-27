@@ -1,5 +1,7 @@
 header nav{
-    padding: 15px 4%;
+    background: #acbdde;
+    padding: 10px 4%;
+    /* margin-bottom: 20px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,6 +22,7 @@ a{
 .logo img{
     width: 70px;
     border-radius: 8px;
+    cursor: pointer;
 }
 .nav-btn button{
     padding: 15px;
@@ -29,8 +32,42 @@ a{
     background-color: #3B5F96;
     color: white;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .hamburger{
+    color: #0D1B3A;
+    font-size: 28px;
     display: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 780px){
+    .hamburger{
+        display: block;
+        z-index: 2;
+    }   
+    .nav-links{
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #acbdde;
+
+        width: 100%;
+        transition: 0.5s ease-in;
+    }
+    .nav-links ul{
+        align-items: center;
+        flex-direction: column;
+    }
+    .nav-links.active{
+        z-index: 1;
+        display: block;
+        padding: 20px;
+    }
+    .nav-btn{
+        margin-right: -45%;
+    }
 }
