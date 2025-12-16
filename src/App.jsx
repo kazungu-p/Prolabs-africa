@@ -1,18 +1,24 @@
 import React from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
 import Navbar from "./components/Navbar"
-import Landing from "./components/Landing"
-import Section from "./components/Section"
-import AboutUsData from "./assets/data/AboutUsData"
-import Services from "./assets/data/Services"
+import Home from "./pages/Home"
+import Footer from "./components/Footer"
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <Landing />
-      <Section title={"About Us"} data={AboutUsData}/>
-      <Section title={"What we do"} data={Services} className={"services"}/>
+      <div className="app">
+        <Router>
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+          </Routes>
+        </Router>
+
+      </div>
+      <Footer/>
     </>
   )
 }

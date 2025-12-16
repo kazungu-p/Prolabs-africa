@@ -1,74 +1,105 @@
-header nav{
-    background: #acbdde;
-    padding: 10px 4%;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
 }
-ul{
-    list-style: none;
+.navbar-container h1 {
+  font-size: 25px;
+  font-weight: 600;
 }
-a{
-    text-decoration: none;
-    font-size: 18px;
-    color: #0D1B3A;
+.navbar-container span {
+  color: blue;
+  font-family: "Dancing Script", cursive;
 }
-.nav-links, .nav-links ul{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
-.logo img{
-    width: 70px;
-    border-radius: 8px;
-    cursor: pointer;
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 17px;
+  margin-right: 150px;
 }
-.nav-links button{
-    padding: 15px;
-    border: 0;
-    outline: 0;
-    border-radius: 10px;
-    background-color: #3B5F96;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.btn-container button {
+  border: none;
+  outline: 0;
+  padding: 10px 25px;
+  font-size: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.btn-container .call-btn {
+  color: navy;
+  background: transparent;
+  border: 1px solid blue;
+}
+.btn-container .quote-btn {
+  background: blue;
+  color: white;
+}
+.nav-link.active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid black;
+}
+.hamburger {
+  font-size: 25px;
+  display: none;
 }
 
-.hamburger{
-    color: #0D1B3A;
-    font-size: 28px;
-    display: none;
-    cursor: pointer;
+@media screen and (max-width: 750px) {
+  .hamburger {
+    display: block;
+  }
+  .navbar-container h1 {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .nav-links {
+   align-items: center;
+   text-align: center;
+   width: 100%;
 }
-@media screen and (max-width: 780px){
-    .hamburger{
-        display: block;
-        z-index: 2;
-    }   
-    .nav-links{
-        display: none;
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #acbdde;
-        width: 100%;
-        transition: 0.5s ease-in;
-        align-items: center;
-    }
-    .nav-links ul{
-        align-items: center;
-        flex-direction: column;
-    }
-    .nav-links.active{
-        z-index: 1;
-        display: block;
-        padding: 10px;
-    }
-    .nav-links button{
-        margin: 10px auto;
-        display: block;
-    }
+
+  .nav-right {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    padding: 0 15px;
+    width: 100%;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-right.active {
+    max-height: 300px;
+    padding: 15px;
+    z-index: 1;
+  }
+  .nav-links, .btn-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .navbar-container h1 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  .nav-links {
+    margin-right: 40px;
+  }
 }

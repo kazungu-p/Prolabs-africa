@@ -1,0 +1,74 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #323232;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 100px;
+}
+.footer-container-information{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    width: 90%;
+    gap: 4%;
+}
+.company-info, .company-links, .contact-company{
+    display: flex;
+    flex-direction: column;
+}
+.company-info h2, .company-links h2, .contact-company h2{
+    font-size: x-large;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.company-info  h2 span{
+    color: blue;
+    font-family: 'Dancing Script', cursive;
+}
+.company-info p{
+    margin-bottom: 10px;
+}
+.company-links li, .contact-company li{
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.social-platforms{
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+}
+.social-platforms img{
+    width: 35px;
+}
+.contact-tab{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+.contact-tab img{
+    width: 20px;
+    margin-right: 10px;
+}
+.footer-container hr{
+    height: 2px;
+    width: 90%;
+    outline: 0;
+    color: grey;
+    margin-top: 30px;
+}
+.copyright{
+    margin: 15px 0;
+    text-align: center;
+}
+@media screen and (max-width: 780px) {
+    .footer-container-information{
+        display: flex;
+        flex-direction: column;
+       gap: 20px;
+    }
+   /* .company-info p, .copyright{
+   } */
+}
