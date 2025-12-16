@@ -58,15 +58,15 @@
 }
 @media screen and (max-width:750px){
     .hero-container-content{
-        max-width: 75%;
-        top: 0%;
+        max-width: 80%;
+        top: 30%;
     }
     .hero-container{
         height: 65vw;
         background-size: contain;
     }
     .hero-container-content h2{
-        font-size: 1.5em;
+        font-size: 1.4em;
     }  
     .hero-container-content .cta{
         padding: 8px 15px;
