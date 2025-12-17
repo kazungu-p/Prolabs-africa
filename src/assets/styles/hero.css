@@ -48,11 +48,13 @@
     .hero-container-content h2{
         font-size: 22px;
     }
-    .hero-container-content h2{
+    .hero-container-content h3{
         font-size: 15px;
     }
     .hero-container-content p{
         font-size: 15px;
+        width: 100%;
+        text-align: justify;
     }
 }
 
