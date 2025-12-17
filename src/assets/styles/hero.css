@@ -13,7 +13,7 @@
     position: absolute;
     top: 10%;
     left: 10%;
-    max-width: 50%;
+    max-width: 60%;
     gap: 20px;
     animation: fadeIn 3s;
 }
@@ -65,28 +65,35 @@
     }
 }
 @media screen and (max-width:750px){
-    .hero-container-content{
-        max-width: 80%;
-        top: 20%;
+
+    .hero-container {
+        height: 70vw; /* Taller on mobile */
+        background-size: cover !important; /* Force cover */
+        background-position: center center !important;
     }
-    .hero-container{
-        height: 65vw;
-        background-size: contain;
+    
+    .hero-container-content {
+        top: 10% !important; /* Lower on mobile */
+        width: 100% !important;
+        padding: 0 15px !important; /* Safe padding */
     }
-    .hero-container-content h2{
-        font-size: 1.5em;
-    } 
-    .hero-container-content h3{
-        font-size: 1.2em;
-    }  
-    .hero-container-content p{
-        display: none;
+    
+    .hero-container-content h2 {
+        font-size: 1.5em !important;
+        width: 100% !important;
     }
-    .hero-container-content .cta{
-        padding: 8px 15px;
-        font-size: 15px;
+    
+    .hero-container-content p {
+        display: none; /* Hide on mobile as per your design */
+    }
+    
+    .hero-container-content .cta {
+        margin-top: 10px !important;
+        width: auto !important;
+        min-width: 150px !important; /* Minimum button size */
     }
 }
+
 @media screen and (max-width:1050px){
     
     .hero-container{

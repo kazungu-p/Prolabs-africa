@@ -29,6 +29,7 @@
 }
 .company-info p{
     margin-bottom: 10px;
+    text-align: justify;
 }
 .company-links li, .contact-company li{
     list-style: none;
@@ -70,6 +71,5 @@
         flex-direction: column;
        gap: 20px;
     }
-   /* .company-info p, .copyright{
-   } */
+
 }
