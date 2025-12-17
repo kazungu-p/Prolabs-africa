@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 30%;
+    top: 10%;
     left: 10%;
     max-width: 50%;
     gap: 20px;
@@ -20,6 +20,10 @@
 .hero-container-content h2{
     font-size: 2.5em;
     font-weight: 500;
+}
+.hero-container-content h3{
+    font-size: 1.5em;
+    opacity: 0.7;
 }
 .hero-container-content p{
     width: 75%;
@@ -35,19 +39,23 @@
     color: white;
     cursor: pointer;
 }
-@media screen and (max-width:480px){
+@media screen and (max-width:520px){
     .hero-container-content{
         max-width: 100%;
-        top: 20%;
+        top: 8%;
     }
     .hero-container{
-        height: 65vw;
+        height: 70vw;
         background-size: contain;
     }
     .hero-container-content h2{
-        font-size: 25px;
+        font-size: 22px;
+        margin-bottom: 13px;
     }  
     .hero-container-content p{
+        display: none;
+    } 
+    .hero-container-content h3{
         display: none;
     } 
     .hero-container-content .cta{
@@ -58,15 +66,18 @@
 }
 @media screen and (max-width:750px){
     .hero-container-content{
-        max-width: 75%;
-        top: 30%;
+        max-width: 80%;
+        top: 20%;
     }
     .hero-container{
         height: 65vw;
         background-size: contain;
     }
     .hero-container-content h2{
-        font-size: 1.8em;
+        font-size: 1.5em;
+    } 
+    .hero-container-content h3{
+        font-size: 1.2em;
     }  
     .hero-container-content p{
         display: none;
@@ -83,6 +94,7 @@
         background-size: contain;
     }
     .hero-container-content{
+        top: 25%;
         max-width: 75%;
         gap: 15px;
     }

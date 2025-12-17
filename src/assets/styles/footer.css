@@ -42,6 +42,7 @@
 }
 .social-platforms img{
     width: 35px;
+    cursor: pointer;
 }
 .contact-tab{
     display: flex;

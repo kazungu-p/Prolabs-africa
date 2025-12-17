@@ -19,6 +19,6 @@ a{
         opacity: 1;
     }
 }
-@keyframes popUp {
-    0%{}
+body{
+    font-family: "Montserrat", sans-serif;
 }
