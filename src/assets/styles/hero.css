@@ -1,100 +1,58 @@
 .hero-container{
-    background:url(/images/landing.png) no-repeat;
+    background: url(/images/landing.png) no-repeat;
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 75vh;
     position: relative;
-    margin-top: 30px;
 }
 .hero-container-content{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 20px;
+    width: 65%;
     position: absolute;
     top: 10%;
-    left: 10%;
-    max-width: 50%;
-    gap: 20px;
-    animation: fadeIn 3s;
+    left: 5%;
 }
 .hero-container-content h2{
     font-size: 2.5em;
-    font-weight: 500;
-}
-.hero-container-content h3{
-    font-size: 1.5em;
-    opacity: 0.7;
+    font-weight: 600;
 }
 .hero-container-content p{
-    width: 75%;
-    font-size: 1.2em;
+    width: 70%;
+    font-size: 1.5em;
     opacity: 0.7;
+    font-weight: 400;
+}
+.hero-container-content h3{
+    font-size: 1.3em;
+    font-weight: 600;
+    opacity: 0.8;
 }
 .hero-container-content .cta{
-    border: none;
-    font-size: 16px;
     padding: 10px 25px;
+    border: none;
     border-radius: 15px;
-    background-color: blue;
     color: white;
     cursor: pointer;
+    background-color: blue;
 }
-@media screen and (max-width:480px){
-    .hero-container-content{
-        max-width: 100%;
-        top: 20%;
-    }
+
+@media screen and (max-width: 750px){
     .hero-container{
-        height: 75vh;
-        background-size: cover;
-    }
-    .hero-container-content h2{
-        font-size: 25px;
-    }  
-    .hero-container-content p{
-        display: none;
-    } 
-    .hero-container-content .cta{
-        padding: 8px 15px;
-        font-size: 15px;
-        margin-top: -5%;
-    }
-}
-@media screen and (max-width:750px){
-    .hero-container-content{
-        max-width: 100%;
-        top: 10%;
-    }
-    .hero-container{
-        height: 75vh;
-        background-size: cover;
-    }
-    .hero-container-content h2{
-        font-size: 1.4em;
-    }  
-    .hero-container-content h3{
-        font-size: 1.2em;
-    }  
-    .hero-container-content p{
-        display: none;
-    }
-    .hero-container-content .cta{
-        padding: 8px 15px;
-        font-size: 15px;
-    }
-}
-@media screen and (max-width:1050px){
-    
-    .hero-container{
-        height: 65vw;
-        background-size: contain;
+        height: 50vh;
     }
     .hero-container-content{
-        top: 25%;
-        max-width: 75%;
-        gap: 15px;
+        width: 90%;
     }
-    .hero-container-content h2{
-        font-size: 1.5em;
+}
+
+@media screen and (max-width: 1200px){
+    .hero-container{
+        height: 50vh;
+    }
+    .hero-container-content{
+        width: 80%;
     }
 }

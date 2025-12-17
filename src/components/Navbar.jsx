@@ -6,7 +6,10 @@ function Navbar(){
     const [menuOpen, setMenuOpen] =useState(false);
 
     function toggleMenu(){
-        setMenuOpen(!menuOpen)
+        setMenuOpen(!menuOpen);
+    }
+    function closeMenu(){
+        setMenuOpen(false);
     }
     return(
         <header>
@@ -15,9 +18,9 @@ function Navbar(){
                     <h1>ProLabs <span>Africa</span></h1>
                     <div className={`nav-right ${menuOpen? "active": ""}`}>
                         <ul className="nav-links">
-                            <li><NavLink to="/" className={({isActive})=>isActive? "nav-link active": "nav-link"}>Home</NavLink></li>
-                            <li><NavLink to="/portfolio" className={({isActive})=>isActive? "nav-link active": "nav-link"}>Porfolio</NavLink></li>
-                            <li><NavLink to="/contact" className={({isActive})=>isActive? "nav-link active": "nav-link"}>Contact</NavLink></li>
+                            <li><NavLink to="/" className={({isActive})=>isActive? "nav-link active": "nav-link"} onClick={closeMenu}>Home</NavLink></li>
+                            <li><NavLink to="/portfolio" className={({isActive})=>isActive? "nav-link active": "nav-link"} onClick={closeMenu}>Porfolio</NavLink></li>
+                            <li><NavLink to="/contact" className={({isActive})=>isActive? "nav-link active": "nav-link"} onClick={closeMenu}>Contact</NavLink></li>
                         </ul>
                         <div className="btn-container">
                             <button className="call-btn">Call: +254712345678</button>
