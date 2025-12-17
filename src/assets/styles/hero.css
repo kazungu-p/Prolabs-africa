@@ -62,15 +62,18 @@
 }
 @media screen and (max-width:750px){
     .hero-container-content{
-        max-width: 75%;
-        top: 20%;
+        max-width: 100%;
+        top: 10%;
     }
     .hero-container{
-        height: 45vh;
-        background-size: contain;
+        height: 75vh;
+        background-size: cover;
     }
     .hero-container-content h2{
-        font-size: 1.8em;
+        font-size: 1.4em;
+    }  
+    .hero-container-content h3{
+        font-size: 1.2em;
     }  
     .hero-container-content p{
         display: none;
