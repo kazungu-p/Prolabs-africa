@@ -33,7 +33,7 @@
     box-shadow: 0 0 10px 0 #555;
     padding: 25px;
     border-radius: 8px;
-    height: 450px;
+    /* height: 450px; */
 }
 .form-container form input, .form-container form textarea{
     padding: 10px;
@@ -97,9 +97,15 @@
     border: 0;
     border-radius: 5px;
 }
-@media screen and (max-width){
+@media screen and (max-width:750px){
     .contact-us-container{
         display: flex;
         flex-direction: column;
     }
+    .contact-us p{
+        width: 80%;
+    }
+    /* .form-container form{
+        width: 600px;
+    } */
 }
