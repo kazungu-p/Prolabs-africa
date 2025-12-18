@@ -8,7 +8,7 @@ function Footer() {
             <div className="footer-container-information">
                 <div className="company-info">
                     <h2>ProLabs <span>Africa</span></h2>
-                    <p>Prolab Africa is a youthful, modern, and tech-driven consultancy that sits at the intersection of data science, crime & security intelligence, and software solutions. We build practical, high-impact tools and advisory services for NGOs, county governments, corporations, universities, and startups across Africa. Our multidisciplinary team blends criminology, applied statistics, and computer science to deliver evidence-based intelligence, secure systems, and automated workflows.</p>
+                    <p>Prolab Africa is a modern intelligence and technology consultancy delivering data-driven security insights, software solutions, and automation for Africa’s most complex challenges.</p>
                     <div className="social-platforms">
                         <img src="/images/facebook.svg" alt="facbook icon" />
                         <img src="/images/linkedin.svg" alt="linkedin icon" />

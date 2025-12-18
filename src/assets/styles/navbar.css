@@ -12,41 +12,34 @@
   color: blue;
   font-family: "Dancing Script", cursive;
 }
-.nav-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
 .nav-links {
   display: flex;
   list-style: none;
   gap: 20px;
   font-size: 17px;
-  margin-right: 150px;
+  cursor: pointer;
 }
-.btn-container {
+.nav-right {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.btn-container button {
+
+.nav-right button {
   border: none;
   outline: 0;
   padding: 10px 25px;
   font-size: 15px;
   border-radius: 15px;
   cursor: pointer;
-}
-.btn-container .call-btn {
-  color: navy;
-  background: transparent;
-  border: 1px solid blue;
-}
-.btn-container .quote-btn {
   background: blue;
   color: white;
 }
+.nav-links .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid black;
+}
+
 .nav-link.active {
   padding-bottom: 2px;
   border-bottom: 2px solid black;
@@ -65,11 +58,11 @@
     font-weight: 600;
   }
 
-  .nav-right {
+  .nav-center {
     max-height: 0;
     overflow: hidden;
     position: absolute;
-    top: 50px;
+    top: 80px;
     left: 0;
     background-color: white;
     padding: 0 15px;
@@ -79,13 +72,14 @@
     flex-direction: column;
     align-items: center;
   }
-  
-  .nav-right.active {
+
+  .nav-center.active {
     max-height: 300px;
     padding: 20px;
     z-index: 1;
   }
-  .nav-links, .btn-container {
+  .nav-links,
+  .btn-container {
     flex-direction: column;
   }
 }
