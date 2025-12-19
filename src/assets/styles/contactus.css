@@ -116,6 +116,9 @@
     margin-right: 10px;
   }
   .physical-address, .form-container form{
-    width: 350px;
+    width: 320px;
+  }
+  .form-container form{
+    padding: 20px;
   }
 }
