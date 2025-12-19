@@ -19,12 +19,12 @@
 .physical-address{
     gap: 25px;
     height: 450px;
+    width: 450px;
 }
 .contact-us-container{
     margin-top: 50px;
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: repeat(2, 450px);
     gap: max(5vw, 20px);
 }
 .form-container form{
@@ -33,7 +33,8 @@
     box-shadow: 0 0 10px 0 #555;
     padding: 25px;
     border-radius: 8px;
-    /* height: 450px; */
+    width: 450px;
+    height: 450px;
 }
 .form-container form input, .form-container form textarea{
     padding: 10px;
@@ -75,7 +76,7 @@
     width: 100%;
 }
 .place img, .phone img{
-    margin-right: -30px;
+    margin-right: -15px;
 }
 .email img{
     margin-right: 10px;
@@ -99,13 +100,15 @@
 }
 @media screen and (max-width:750px){
     .contact-us-container{
-        display: flex;
         flex-direction: column;
     }
     .contact-us p{
-        width: 80%;
+        width: fit-content;
     }
     /* .form-container form{
         width: 600px;
     } */
+     .place img, .phone img{
+    margin-right: 10px;
+}
 }
