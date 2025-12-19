@@ -1,114 +1,121 @@
-.contact-us{
-    align-items: center;
-    margin-top: 30px;
+.contact-us {
+  align-items: center;
+  margin-top: 30px;
 }
-.contact-us h2{
-    font-size: 2em;
-    margin-bottom: 15px;
+.contact-us h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
 }
-.contact-us p{
-    font-size: 1.2em;
-    width: 60%;
-    text-align: center;
-    color: #555;
+.contact-us p {
+  font-size: 1.2em;
+  width: 60%;
+  text-align: center;
+  color: #555;
 }
-.contact-us, .form-container form, .physical-address, .physical-address .address{
-    display: flex;
+.contact-us,
+.form-container form,
+.physical-address,
+.physical-address .address {
+  display: flex;
+  flex-direction: column;
+}
+.physical-address {
+  gap: 25px;
+  height: 450px;
+  width: 450px;
+}
+.contact-us-container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: max(5vw, 20px);
+}
+.form-container form {
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 0 10px 0 #555;
+  padding: 25px;
+  border-radius: 8px;
+  width: 450px;
+  height: 450px;
+}
+.form-container form input,
+.form-container form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #5555;
+  outline: none;
+  font-size: 15px;
+}
+.form-container form button {
+  padding: 10px;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.form-container form button:hover {
+  background-color: #00008b;
+}
+.address,
+.map-container {
+  box-shadow: 0 0 10px 0 #555;
+  padding: 25px;
+  border-radius: 5px;
+}
+.address {
+  align-items: center;
+  transition: 0.5s;
+}
+
+.place,
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.place img,
+.phone img {
+  margin-right: -15px;
+}
+.email img {
+  margin-right: 10px;
+}
+.address img {
+  width: 25px;
+}
+.address .hours h3 {
+  font-size: 16px;
+}
+.address h3 {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+.physical-address iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 5px;
+}
+@media screen and (max-width: 750px) {
+  .contact-us-container {
     flex-direction: column;
-}
-.physical-address{
-    gap: 25px;
-    height: 450px;
-    width: 450px;
-}
-.contact-us-container{
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    gap: max(5vw, 20px);
-}
-.form-container form{
-    justify-content: center;
-    gap: 15px;
-    box-shadow: 0 0 10px 0 #555;
-    padding: 25px;
-    border-radius: 8px;
-    width: 450px;
-    height: 450px;
-}
-.form-container form input, .form-container form textarea{
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #5555;
-    outline: none;
-    font-size: 15px;
-}
-.form-container form button{
-    padding: 10px;
-    border: none;
-    font-size: 15px;
-    border-radius: 5px;
-    color: white;
-    background-color: blue;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.form-container form button:hover{
-    background-color: #00008B;
-}
-.address, .map-container{
-    box-shadow: 0 0 10px 0 #555;
-    padding: 25px;
-    border-radius: 5px;
-}
-.address{
-    align-items: center;
-    transition: 0.5s;
-}
-.address:hover{
-    transform: translateY(-20px);
-}
-.place, .phone, .email{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    width: 100%;
-}
-.place img, .phone img{
-    margin-right: -15px;
-}
-.email img{
+  }
+  .contact-us p {
+    width: fit-content;
+  }
+  .place img,
+  .phone img {
     margin-right: 10px;
-}
-.address img{
-    width: 25px;
-}
-.address .hours h3{
-    font-size: 16px;
-}
-.address h3{
-    text-align: center;
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-.physical-address iframe{
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 5px;
-}
-@media screen and (max-width:750px){
-    .contact-us-container{
-        flex-direction: column;
-    }
-    .contact-us p{
-        width: fit-content;
-    }
-    /* .form-container form{
-        width: 600px;
-    } */
-     .place img, .phone img{
-    margin-right: 10px;
-}
+  }
+  .physical-address, .form-container form{
+    width: 400px;
+  }
 }
