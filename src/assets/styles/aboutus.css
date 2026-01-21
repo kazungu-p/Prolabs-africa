@@ -1,0 +1,49 @@
+.about-us, .about-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-us{
+    gap: 20px;
+}
+.about-us p, .about-item ul li{
+    opacity: 0.8;
+}
+.about-us h2{
+    margin-top: 20px;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+.about-text{
+    width: 70%;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.about-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.about-item{
+    gap: 10px;
+    box-shadow: 0 0 10px gray;
+    padding: 20px;
+    border-radius: 15px;
+}
+.about-item h3{
+    font-size: 20px;
+}
+.about-item p{
+    text-align: justify;
+}
+.about-item ul{
+    list-style: none;
+}
+.about-item ul li{
+    margin: 10px 0;
+}
+.about-item:hover{
+    transform: translateY(-7px);
+    transition: 0.3s ease-in-out;
+}
