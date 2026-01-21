@@ -2,7 +2,7 @@
     background: url(/images/landing.png) no-repeat;
     background-size: cover;
     background-position: center;
-    height: 75vh;
+    height: 85vh;
     position: relative;
 }
 .hero-container-content{
@@ -12,7 +12,7 @@
     gap: 20px;
     width: 65%;
     position: absolute;
-    top: 10%;
+    top: 30%;
     left: 5%;
     animation: fadeIn 5s;
 }

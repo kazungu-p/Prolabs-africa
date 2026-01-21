@@ -11,9 +11,9 @@ function ContactUs() {
                 <div className="form-container">
                     <form >
                         <input type="text" placeholder="Full Name" required />
+                        <input type="text" placeholder="Organisation" required />
                         <input type="email" placeholder="Email Address" required />
-                        <input type="number" placeholder="Phone Number" required />
-                        <textarea rows={7} placeholder="Type your message here" required></textarea>
+                        <textarea rows={7} placeholder="Brief Project Description" required></textarea>
                         <button>Send Message</button>
                     </form>
                 </div>

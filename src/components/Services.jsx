@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import AboutUsData from "../assets/data/AboutUsData";
-import "../assets/styles/aboutus.css";
+
+import "../assets/styles/services.css";
+
+import servicesData from "../assets/data/ServicesData";
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.9, y: 40 },
@@ -13,9 +15,9 @@ const headingVariants = {
   visible: { opacity: 1, y: 0 }
 };
 
-function AboutUs() {
+function Services() {
   return (
-    <section className="about-us">
+    <section className="service-pillars">
       <motion.h2
         variants={headingVariants}
         initial="hidden"
@@ -23,24 +25,24 @@ function AboutUs() {
         viewport={{ amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
-        Who We Are
+        What We Do
       </motion.h2>
 
       <motion.p
-        className="about-text"
         variants={headingVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.3 }}
         transition={{ delay: 0.2, duration: 0.6 }}
+        className="services-intro"
       >
-        Prolab Africa was founded to bridge a yawning gap: organisations need insight, security guidance, and systems that actually work in African contexts. We take a human-centred, African-first approach that values practicality, speed, and measurable outcomes. Our team blends criminology, applied statistics, and software engineering — meaning every solution is both evidence-based and technically robust.
+        We deliver analytical, security, and technology solutions tailored to organizational and research needs.
       </motion.p>
 
-      <div className="about-card">
-        {AboutUsData.map((item, index) => (
+      <div className="service-card">
+        {servicesData.map((item, index) => (
           <motion.div
-            className="about-item"
+            className="services-item"
             key={item.id}
             variants={cardVariants}
             initial="hidden"
@@ -49,21 +51,18 @@ function AboutUs() {
             transition={{ delay: index * 0.15, duration: 0.5 }}
           >
             <h3>{item.heading}</h3>
+            <p>{item.description}</p>
 
-            {item.list ? (
-              <ul className="list-class">
-                {item.list.map((value, i) => (
-                  <li key={i}>{value}</li>
-                ))}
-              </ul>
-            ) : (
-              <p>{item.description}</p>
-            )}
+            <ul className="list-class">
+              {item.list.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
           </motion.div>
         ))}
       </div>
     </section>
-  );
+    );
 }
 
-export default AboutUs;
+export default Services;
