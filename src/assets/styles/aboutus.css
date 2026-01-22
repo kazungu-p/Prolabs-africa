@@ -48,3 +48,12 @@
     transform: translateY(-7px);
     transition: 0.5s ease-in-out;
 }
+@media screen and (max-width:750px){
+    .about-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-text{
+        width: fit-content;
+    }
+}

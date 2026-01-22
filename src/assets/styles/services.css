@@ -9,8 +9,9 @@
 }
 .service-card{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
+    width: 100%;
 }
 .services-item{
     box-shadow: 0 0 10px gray;
@@ -23,4 +24,10 @@
 .services-item p{
     margin: 10px 0;
     text-align: justify;
+}
+@media screen and (max-width:750px){
+    .service-card{
+        display: flex;
+        flex-direction: column;
+    }
 }
