@@ -36,7 +36,11 @@ function Services() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="services-intro"
       >
-       We provide integrated analytical, security, and technology solutions designed to meet the complex operational and research needs of modern organizations. Our work combines data-driven insight, evidence-based security strategy, and practical software development to help institutions make informed decisions, reduce risk, and build systems that perform reliably in real-world environments. Every engagement is tailored to the client’s context, objectives, and resource constraints, ensuring outcomes that are not only technically sound but also operationally effective.
+        We deliver integrated analytical, security, and technology solutions tailored to the real needs of organizations and research teams.
+        Our work blends data science, evidence-based security strategy, and practical software engineering.
+        We help clients turn complex information into clear, actionable insight.
+        We design systems that reduce risk, improve efficiency, and support sound decision-making.
+        Every solution is built for real-world environments, not just theory.
       </motion.p>
 
       <div className="service-card">
@@ -62,7 +66,7 @@ function Services() {
         ))}
       </div>
     </section>
-    );
+  );
 }
 
 export default Services;
