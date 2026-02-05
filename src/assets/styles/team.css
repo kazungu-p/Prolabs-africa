@@ -52,5 +52,10 @@
 @media screen and (max-width: 750px) {
     .team-card{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-info h3{
+        align-self: center;
     }
 }

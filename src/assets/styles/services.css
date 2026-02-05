@@ -1,37 +1,44 @@
-.service-pillars{
-    margin-top: 20px;
-    gap: 20px;
+.service-pillars {
+  margin-top: 20px;
+  gap: 20px;
 }
-.service-pillars, .services-item{
+.service-pillars,
+.services-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-pillars h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+}
+.service-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.services-intro {
+  width: 70%;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.services-item {
+  box-shadow: 0 0 10px gray;
+  padding: 20px;
+  border-radius: 15px;
+}
+.services-item h3 {
+  text-align: center;
+}
+.services-item p {
+  margin: 10px 0;
+  text-align: justify;
+}
+@media screen and (max-width: 750px) {
+  .service-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-.service-pillars h2{
-    font-size: 1.7em;
-    font-weight: 600;
-}
-.service-card{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    width: 100%;
-}
-.services-item{
-    box-shadow: 0 0 10px gray;
-    padding: 20px;
-    border-radius: 15px;
-}
-.services-item h3{
-    text-align: center;
-}
-.services-item p{
-    margin: 10px 0;
-    text-align: justify;
-}
-@media screen and (max-width:750px){
-    .service-card{
-        display: flex;
-        flex-direction: column;
-    }
+  }
 }

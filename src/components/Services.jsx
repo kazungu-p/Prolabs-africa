@@ -36,7 +36,7 @@ function Services() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="services-intro"
       >
-        We deliver analytical, security, and technology solutions tailored to organizational and research needs.
+       We provide integrated analytical, security, and technology solutions designed to meet the complex operational and research needs of modern organizations. Our work combines data-driven insight, evidence-based security strategy, and practical software development to help institutions make informed decisions, reduce risk, and build systems that perform reliably in real-world environments. Every engagement is tailored to the client’s context, objectives, and resource constraints, ensuring outcomes that are not only technically sound but also operationally effective.
       </motion.p>
 
       <div className="service-card">
