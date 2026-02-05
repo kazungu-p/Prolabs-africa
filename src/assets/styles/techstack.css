@@ -33,9 +33,9 @@
     width: 300px;
     gap: 15px;
   }
-  /* .tech-card{
-    padding: 10px;
-  } */
+  .tech-card{
+    padding: 8px;
+  }
   .tech-card img{
     width: 80px;
     height: 80px;
