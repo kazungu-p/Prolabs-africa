@@ -7,6 +7,10 @@
     flex-direction: column;
     align-items: center;
 }
+.service-pillars h2{
+    font-size: 1.7em;
+    font-weight: 600;
+}
 .service-card{
     display: grid;
     grid-template-columns: repeat(3,1fr);

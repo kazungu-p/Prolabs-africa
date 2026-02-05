@@ -29,7 +29,7 @@ function Team() {
       <div className="team-grid">
         {TeamData.map((member, index) => (
           <motion.div
-            className="team-card"
+            className={`team-card ${index % 2 !== 0 ? "card-2" : ""}`}
             key={member.id}
             variants={cardVariants}
             initial="hidden"
