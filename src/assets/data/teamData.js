@@ -1,10 +1,8 @@
-import { image } from "framer-motion/client";
-
 const teamData = [
   {
     id: 1,
     name: "Thomas Mwingo",
-    image:"/images/kazungu.jpeg",
+    image: "/images/kazungu.jpeg",
     bio: "A criminology graduate with strong IT experience, responsible for security strategy, field assessments, client engagement, and bridging operational needs with analytic outputs.",
     responsibilities: [
       "Lead security audits and crime intelligence projects",
@@ -15,7 +13,7 @@ const teamData = [
   {
     id: 2,
     name: "Marylorine Akinyi",
-    image:"/images/kazungu.jpeg",
+    image: "/images/kazungu.jpeg",
     bio: "An applied statistician and MSc candidate in Data Science and Analytics. Expert at turning messy datasets into thoughtful, reproducible analysis and predictive models that support evidence-based action.",
     responsibilities: [
       "Build statistical models and predictive systems",

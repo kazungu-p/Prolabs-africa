@@ -6,14 +6,15 @@ import Team from "../components/Team";
 import TechStack from "../components/TechStack";
 
 function Home() {
-    return (
-        <>
-            <Hero />
-            <AboutUs/>
-            <Services/>
-            <Team/>
-            <TechStack/>
-        </>
-    )
+  return (
+    <>
+      <Hero />
+      <AboutUs />
+      <Services />
+      <Team />
+      <TechStack />
+    </>
+  );
 }
+
 export default Home;

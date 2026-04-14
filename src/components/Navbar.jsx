@@ -1,43 +1,136 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import "../assets/styles/navbar.css"
 
 function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    function toggleMenu() {
-        setMenuOpen(!menuOpen);
-    }
-    function closeMenu() {
-        setMenuOpen(false);
-    }
-    return (
-        <header>
-            <nav>
-                <div className="navbar-container">
-                    <div className="nav-left">
-                        <h1>ProLabs <span>Africa</span></h1>
-                    </div>
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handler);
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
 
-                    <div className={`nav-center ${menuOpen ? "active" : ""}`}>
-                        <ul className="nav-links">
-                            <li><NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeMenu}>Home</NavLink></li>
-                            <li><NavLink to="/portfolio" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeMenu}>Porfolio</NavLink></li>
-                            <li><NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={closeMenu}>Contact</NavLink></li>
-                        </ul>
+  return (
+    <header className={`navbar-header ${scrolled ? "scrolled" : ""}`}>
+      <nav className="navbar-inner app">
+        <NavLink to="/" className="nav-brand">
+          ProLabs<span>&nbsp;Africa</span>
+        </NavLink>
 
-                    </div>
-                    <div className="nav-right">
-                        <button className="quote-btn">Get a Quote</button>
-                        <div className="hamburger" onClick={toggleMenu}>
-                            {menuOpen ? "\u2715" : "\u2630"}
-                        </div>
-                    </div>
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <li><NavLink to="/" onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink></li>
+          <li><NavLink to="/portfolio" onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Portfolio</NavLink></li>
+          <li><NavLink to="/contact" onClick={() => setMenuOpen(false)} className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Contact</NavLink></li>
+        </ul>
 
-                </div>
-            </nav>
-        </header>
-    )
+        <div className="nav-right">
+          <NavLink to="/contact" className="nav-cta-btn">Get a Quote</NavLink>
+          <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+            {menuOpen ? "✕" : "☰"}
+          </button>
+        </div>
+      </nav>
+
+      <style>{`
+        .navbar-header {
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          background: rgba(248,246,241,0.9);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid transparent;
+          transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .navbar-header.scrolled {
+          border-bottom-color: var(--border);
+          box-shadow: 0 2px 24px rgba(10,15,30,0.07);
+        }
+        .navbar-inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 18px 0;
+        }
+        .nav-brand {
+          font-family: var(--font-display);
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: var(--navy);
+          letter-spacing: -0.02em;
+        }
+        .nav-brand span { color: var(--gold); }
+        .nav-links {
+          display: flex;
+          list-style: none;
+          gap: 36px;
+        }
+        .nav-link {
+          font-size: 0.85rem;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: var(--navy);
+          opacity: 0.7;
+          transition: opacity 0.2s;
+          position: relative;
+        }
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -4px; left: 0;
+          width: 0; height: 2px;
+          background: var(--gold);
+          transition: width 0.25s ease;
+        }
+        .nav-link:hover { opacity: 1; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link.active { opacity: 1; }
+        .nav-right { display: flex; align-items: center; gap: 16px; }
+        .nav-cta-btn {
+          padding: 9px 22px;
+          background: var(--navy);
+          color: var(--gold-pale);
+          font-family: var(--font-body);
+          font-size: 0.8rem;
+          font-weight: 600;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          border: none;
+          border-radius: var(--radius);
+          cursor: pointer;
+          transition: background 0.2s, color 0.2s;
+        }
+        .nav-cta-btn:hover { background: var(--gold); color: var(--navy); }
+        .hamburger {
+          display: none;
+          background: none;
+          border: none;
+          font-size: 1.3rem;
+          cursor: pointer;
+          color: var(--navy);
+        }
+        @media (max-width: 768px) {
+          .hamburger { display: block; }
+          .nav-links {
+            display: none;
+            position: absolute;
+            top: 65px; left: 0; right: 0;
+            background: var(--white);
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid var(--border);
+            box-shadow: var(--shadow);
+          }
+          .nav-links.open { display: flex; }
+          .nav-links li { border-bottom: 1px solid var(--border); }
+          .nav-link { display: block; padding: 16px 24px; opacity: 1; }
+          .nav-link::after { display: none; }
+          .nav-cta-btn { display: none; }
+        }
+      `}</style>
+    </header>
+  );
 }
 
 export default Navbar;
