@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import techData from "../assets/data/techData";
 
-import "../assets/styles/techStack.css"
+import "../assets/styles/techstack.css"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
