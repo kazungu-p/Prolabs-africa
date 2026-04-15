@@ -120,7 +120,10 @@ function ContactUs() {
             </ul>
           </div>
 
-          <div className="map-wrap">
+          
+        </motion.div>
+      </div>
+       <div className="map-wrap">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.3239005673!2d36.68258122879488!3d-1.303203560041261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1766097092410!5m2!1sen!2ske"
               allowFullScreen loading="lazy"
@@ -128,8 +131,6 @@ function ContactUs() {
               title="Nairobi Map"
             />
           </div>
-        </motion.div>
-      </div>
     </section>
   );
 }

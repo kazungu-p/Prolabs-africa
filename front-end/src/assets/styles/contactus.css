@@ -23,6 +23,7 @@
   border-radius: var(--radius-lg);
   padding: 40px;
   box-shadow: var(--shadow);
+  height: 530px;
 }
 form {
   display: flex;
@@ -164,6 +165,7 @@ textarea:focus {
   background: var(--navy);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
+  height: 530px;
 }
 .info-card h4 {
   font-size: 0.7rem;
@@ -207,6 +209,7 @@ textarea:focus {
   margin-top: 2px;
 }
 .map-wrap {
+  margin-top: 5vw;
   border-radius: var(--radius-lg);
   overflow: hidden;
   height: 240px;
