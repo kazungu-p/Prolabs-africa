@@ -54,7 +54,7 @@ function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.7 }}
         >
-          {[["3", "Core Pillars"], ["NGOs + Gov.", "Sectors Served"], ["Africa-First", "Approach"]].map(([val, label]) => (
+          {[["3", "Core Pillars"], ["Africa-First", "Approach"]].map(([val, label]) => (
             <div className="stat" key={label}>
               <strong>{val}</strong>
               <span>{label}</span>
